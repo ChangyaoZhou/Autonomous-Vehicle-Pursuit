@@ -1,17 +1,56 @@
-# Autonomous-Vehicle-Pursuit
-< HEAD
+#  Autonomous-Vehicle-Pursuit
+## Robust Autonomous Vehicle Pursuit without Supervised Steering Labels 
 
-Repository for Autonomous Vehicle Pursuit including video, code coming soon...
+ This repository contains code for the paper **Robust Autonomous Vehicle Pursuit without Supervised Steering Labels** submitted to IEEE Robotic Automation Letter. 
 
-Here we share the video to show the qualitative results of our approach for car following. To evaluate the potential of our method in the context of car platooning, we added a second ego-vehicle to follow the first ego-vehicle.
+![image](./images/pipeline_new.png)
 
-To summarize, the first vehicle (red) in the video is controlled by autopilot and has been referred to as the target in this work. The ego-vehicle (in gray) is controlled autonomously using our method to follow the red target vehicle. The second ego-vehicle (in black) is also controlled autonomously by our method but follows its predecessor, i.e. the first ego-vehicle (gray).
+In this work, we present a learning method for lateral and longitudinal motion control of an ego-vehicle for the task of vehicle pursuit. 
+To train our model, we do not rely on steering labels recorded from an expert driver, but effectively leverage classical controller as an offline label generation tool.
+In addition, we account for the errors in the predicted control values, which can lead to crashes of the controlled vehicle. 
+To this end, we propose an effective geometry-based data augmentation approach, which allows to train a network that is capable of handling different views of the target vehicle. 
 
-Here we share the video to show the qualitative results of our approach for car following. To evaluate the potential of our method in the context of car platooning, we added a second ego-vehicle to follow the first ego-vehicle.
+During the pursuit,  target pose of the followed vehicle with respect to the ego-vehicle is firstly estimated using a Convolutional Neural Network. 
+This information is then fed to a Multi-Layer Perceptron, which regresses the control commands for the ego-vehicle, namely throttle and steering angle. 
+We extensively validate our approach using the CARLA simulator on a wide range of terrains and weather conditions. 
+Our method demonstrates real-time performance, robustness to different scenarios including unseen trajectories and high route completion.
 
-To summarize, the first vehicle (red) in the video is controlled by autopilot and has been referred to as the target in this work. The ego-vehicle (in gray) is controlled autonomously using our method to follow the red target vehicle. The second ego-vehicle (in black) is also controlled autonomously by our method but follows its predecessor, i.e. the first ego-vehicle (gray).
+<div align="center"><img src=./images/normal_cropped.gif width=" 500 "></div>  
+<div align="center"><img src=./images/night_cropped.gif width=" 500 "></div> 
 
-Pretrained models:
+Here we show videos to show the qualitative results of our approach for vehicle pursuit in both sunny daytime and dark night. 
+To summarize, the first vehicle (red) in the video is controlled by autopilot. The ego-vehicle (gray) is controlled autonomously with our method to follow the red target vehicle.
+Similarly, he second ego-vehicle (black) is also controlled autonomously by our method but follows its predecessor, i.e. the first ego-vehicle (gray).
+
+
+
+## Environment
+
+Clone the repo, setup CARLA 0.9.11, and build the conda environment:
+
+```
+conda create -n myenv python=3.7 
+conda activate myenv
+conda install --file requirements.txt
+```
+
+For installation of pytorch3d, you can refer to [Pytorch3d - Tutorial](https://pytorch3d.org/tutorials/bundle_adjustment)
+
+For installation of CARLA 0.9.11, you can refer to [CARLA 0.9.11](https://github.com/carla-simulator/carla#building-carla)
+
+### Licences
+**CARLA licenses**
+
+CARLA specific code is distributed under MIT License.
+CARLA specific assets are distributed under CC-BY License.
+
+## Data Collection
+## Data Augmentation
+## Training
+## Inference and Evaluation
+
+
+## Pretrained models:
 
 | Model | CNN/MLP | Path|
 | :-----:| :----: | :----: |
