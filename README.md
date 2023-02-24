@@ -15,13 +15,17 @@ This information is then fed to a Multi-Layer Perceptron, which regresses the co
 We extensively validate our approach using the CARLA simulator on a wide range of terrains and weather conditions. 
 Our method demonstrates real-time performance, robustness to different scenarios including unseen trajectories and high route completion.
 
-<div align="center"><img src=./images/normal_cropped.gif width=" 500 "></div>  
-<div align="center"><img src=./images/night_cropped.gif width=" 500 "></div> 
+## Result
 
-Here we show videos to show the qualitative results of our approach for vehicle pursuit in both sunny daytime and dark night. 
-To summarize, the first vehicle (red) in the video is controlled by autopilot. The ego-vehicle (gray) is controlled autonomously with our method to follow the red target vehicle.
-Similarly, he second ego-vehicle (black) is also controlled autonomously by our method but follows its predecessor, i.e. the first ego-vehicle (gray).
+Here we show videos to show the qualitative results of our approach in different maps, in a city (left) and in the countryside (right). 
+To summarize, the first vehicle (red) in the video is controlled by autopilot. The ego-vehicle (black) is controlled autonomously with our method to follow the red target vehicle.
+<div align="center"><img src=./images/1ego_cat.gif width=" 500 "></div>  
 
+We further tested our model with two ego vehicles. As can be seen in the ego vehicle, the first vehicle (red) is controlled by autopilot, the first ego-vehicle (gray) is controlled by our model to follow the red target vehicle. And the second ego-vehicle (black) is controlled by the same model to follow the gray ego-vehicle.
+<div align="center"><img src=./images/2ego_cat.gif width=" 500 "></div>  
+
+Though the model is trained only with samples in sunny weather, it fits different weather conditions quite well. Here we show two examples, in dark night (left) and rainy weather (right).
+<div align="center"><img src=./images/weather_cat.gif width=" 500 "></div>  
 
 
 ## Environment
