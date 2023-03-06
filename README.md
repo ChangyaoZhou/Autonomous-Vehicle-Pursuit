@@ -50,6 +50,22 @@ CARLA specific assets are distributed under CC-BY License.
 
 ## Data Collection
 ## Data Augmentation
+Example synthesized views with longitudinal, lateral and rotational offset
+<div align="center"><img src=./images/rendering.gif width=" 700 "></div>  
+&nbsp;
+
+To try data augmentation, run [rendering.py](data_augmentation/rendering.py)
+
+```
+python rendering.py --rgb-path <path to RGB images> --depth-path <path to depth maps> --out-path <output path> --txt-path <path to the txt file saved by data collection>
+```
+
+One example is provided under [rendering example](data_augmentation/rendering_example/), to try example, simply run
+
+```
+python rendering.py --rgb-path ./rendering_example/RGB --depth-path ./rendering_example/Depth --out-path ./rendering_example/Output --txt-path ./rendering_example/txt/data.txt
+```
+
 ## Training
 ## Inference and Evaluation
 
@@ -69,6 +85,3 @@ Please follow the inference example in [inference.ipynb](inference/inference.ipy
 | Oracle | CNN | models/pretained_models/Stereo_depth+3D_Detector.pth |
 | Random Noise Injection | CNN | models/pretained_models/Random_Noise_Injection.pth |
 | MLP | MLP | models/pretained_models/MLP.pth |
-> 3470ca8525337d556546dd898105070334c50dd9
-
-
