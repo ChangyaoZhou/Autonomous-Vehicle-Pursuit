@@ -53,6 +53,7 @@ CARLA specific assets are distributed under CC-BY License.
 ## Training
 ## Inference and Evaluation
 
+Please follow the inference example in [inference.ipynb](inference/inference.ipynb).
 
 ## Pretrained models:
 
