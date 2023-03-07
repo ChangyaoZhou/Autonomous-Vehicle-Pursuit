@@ -16,7 +16,8 @@ from prediction.models import MyModel_CNN
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 SPLIT_DIR = './train/split/'
-CONFIG_DIR = '.train/config/'
+CONFIG_DIR = './train/config/'
+LOG_DIR = './train/training_logs/'
 
 
 def shuffle_data(delta_file, split_dir):
@@ -98,10 +99,12 @@ def main():
         print(config)
     for k, v in config.items():
         args.__setattr__(k, v)
-    if not os.path.exists(args.split_dir):
-        os.makedirs(args.split_dir)
+    if not os.path.exists(SPLIT_DIR):
+        os.makedirs(SPLIT_DIR)
     if not os.path.exists(args.save_dir):
         os.makedirs(args.save_dir)
+        if not os.path.exists(LOG_DIR):
+            os.makedirs(LOG_DIR)
      
     print('device:', device)
     # prepare dataset
@@ -110,12 +113,9 @@ def main():
         
     img_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
     img_size = (128, 128)
-    over_data = MyDataset(root=args.image_dir, txtname=args.split_dir + 'overdata_shuffle.txt',
-                           transform=img_transform, size=img_size)
-    train_data = MyDataset(root=args.image_dir, txtname=args.split_dir + 'traindata_shuffle.txt',
-                            transform=img_transform, size=img_size)
-    val_data = MyDataset(root=args.image_dir, txtname=args.split_dir + 'valdata_shuffle.txt',
-                          transform=img_transform, size=img_size)
+    over_data = MyDataset(root=args.image_dir, txtname=SPLIT_DIR + 'overdata_shuffle.txt', transform=img_transform, size=img_size)
+    train_data = MyDataset(root=args.image_dir, txtname=SPLIT_DIR + 'traindata_shuffle.txt', transform=img_transform, size=img_size)
+    val_data = MyDataset(root=args.image_dir, txtname=SPLIT_DIR + 'valdata_shuffle.txt', transform=img_transform, size=img_size)
     over_loader = DataLoader(dataset=over_data, batch_size=args.batch_size, shuffle=True)
     train_loader = DataLoader(dataset=train_data, batch_size=args.batch_size, shuffle=True)
     val_loader = DataLoader(dataset=val_data, batch_size=args.batch_size, shuffle=True)
@@ -138,9 +138,9 @@ def main():
     myoptimizer = optim.Adam(mynet.parameters(), lr=1e-3, eps=1e-08)
     
     # tensorboard setup
-    writer = SummaryWriter('./training_logs/' + args.depth + '_' + args.relative_transform)
+    writer = SummaryWriter(LOG_DIR + args.depth + '_' + args.relative_transform)
     
-    # training 
+    # start training
     if args.train:
         max_epochs = 120
         print('Start training!')
