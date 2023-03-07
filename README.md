@@ -64,13 +64,13 @@ Example synthesized views with longitudinal, lateral and rotational offset
 <div align="center"><img src=./images/rendering.gif width=" 700 "></div>  
 &nbsp;
 
-To try data augmentation, run [rendering.py](data_augmentation/rendering.py)
+To try data augmentation, run [rendering.py](data/data_augmentation/rendering.py)
 
 ```
 python rendering.py --rgb-path <path to RGB images> --depth-path <path to depth maps> --out-path <output path> --txt-path <path to the txt file saved by data collection>
 ```
 
-Example augmentation dataset is provided under [rendering example](data_augmentation/rendering_example/), to try the example, simply run
+Example augmentation dataset is provided under [rendering example](data/data_augmentation/rendering_example/), to try the example, simply run
 
 ```
 python rendering.py --rgb-path ./rendering_example/RGB --depth-path ./rendering_example/Depth --out-path ./rendering_example/Output --txt-path ./rendering_example/txt/data.txt
@@ -86,7 +86,7 @@ python training.py -depth cdn -relative_transform rcnn -image_dir path/to/augmen
 ## Inference and Evaluation
 
 **Steps:**
-1. The inference needs to run with the CARLA simulator, please place [inference folder](inference) under path <code><path_to_Carla_folder>/CARLA/Carla_0.9.11/PythonAPI/examples/</code>. 
+1. The inference needs to run with the CARLA simulator, please place [inference folder](prediction/inference) under path <code><path_to_Carla_folder>/CARLA/Carla_0.9.11/PythonAPI/examples/</code>. 
     
 2. Before running the inference script, it is necessary to start the CARLA simulator. 
     
