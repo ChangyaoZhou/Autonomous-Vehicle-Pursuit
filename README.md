@@ -49,6 +49,16 @@ CARLA specific code is distributed under MIT License.
 CARLA specific assets are distributed under CC-BY License.
 
 ## Data Collection
+If CARLA server is not running in the other terminal, client script will also not run. Thus, first start the CARLA server with (By default connected to port 2000)
+```
+./CarlaUE4.sh
+```
+To try data collection, note that data collection script must be placed under path <code>path_to_Carla_folder>/CARLA/Carla_0.9.11/PythonAPI/examples/...</code>, then run [data_collection_CARLA.py](data_collection/data_collection_CARLA.py) to collect data from a default starting point in a town map, e.g. 
+
+```
+python data_collection_CARLA.py -town 4  -start_point 30
+```
+
 ## Data Augmentation
 Example synthesized views with longitudinal, lateral and rotational offset
 <div align="center"><img src=./images/rendering.gif width=" 700 "></div>  
@@ -67,6 +77,12 @@ python rendering.py --rgb-path ./rendering_example/RGB --depth-path ./rendering_
 ```
 
 ## Training
+To run the training script, run training.py [training.py](train.py). The resource of depth map and relative transformation can be switched by setting arugments<code>depth, relative_transform</code>. Other configurations for training, such as batch size, can be changed in corresponding .json config files.  
+An example of running the training script:
+```
+python training.py -depth cdn -relative_transform rcnn -image_dir path/to/augmented/images -label_file path/to/label/file
+```
+
 ## Inference and Evaluation
 
 Please follow the inference example in [inference.ipynb](inference/inference.ipynb).

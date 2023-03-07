@@ -1,0 +1,9 @@
+{
+  "shuffle": true,
+  "batch_size": 256,
+  "image_dir": "path to augmented images",
+  "label_file": "path to label file",
+  "save_dir": "./train/trained_models/",
+  "train": true,
+  "inference": true
+}
