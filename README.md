@@ -85,7 +85,35 @@ python training.py -depth cdn -relative_transform rcnn -image_dir path/to/augmen
 
 ## Inference and Evaluation
 
-Please follow the inference example in [inference.ipynb](inference/inference.ipynb).
+**Steps:**
+1. The inference needs to run with the CARLA simulator, please place [inference folder](inference) under path <code><path_to_Carla_folder>/CARLA/Carla_0.9.11/PythonAPI/examples/</code>. 
+    
+2. Before running the inference script, it is necessary to start the CARLA simulator. 
+    
+3. Evaluation result will be saved to **evaluation.txt** and **evaluation.xls** under path <code>inference/output/</code>. Both will be created automatically if not existing.
+
+**Arguments:**
+
+1. Extra impulses could be added to the ego vehicle during inference, level could be specified with argument <code>-impulse_level</code> in range [0, 0.5].
+
+2. The following town numbers and spawn points are picked for inference, rare overlapping with trajectories in the training dataset. Inference trajectory could be specified by arguments <code>-town</code> and <code>-spawn_point</code>. Using flag <code>--all</code> would automatically run inference for all trajectories.
+
+| Town Number | Spawn Point Number | 
+| :-----:| :----: | 
+| 1 | 100 | 
+| 1 | 150 | 
+| 3 | 0 | 
+| 3 | 112 | 
+| 3 | 200 | 
+| 4 | 280 | 
+| 4 | 368 | 
+| 5 | 2 | 
+| 5 | 100 | 
+| 5 | 150 | 
+
+```
+python <path to the inference folder>/evaluation_cnnmlp_offline_impulses.py -cnn_path <path to the trained cnn model>, -mlp_path <path to the trained mlp model> -town <town number> -spawn_point <spawn point number> -impulse_level <impulse level number> 
+```
 
 ## Pretrained models:
 
