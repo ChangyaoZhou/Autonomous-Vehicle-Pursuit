@@ -53,7 +53,7 @@ If CARLA server is not running in the other terminal, client script will also no
 ```
 ./CarlaUE4.sh
 ```
-To try data collection, note that data collection script must be placed under path <code><path_to_Carla_folder>/CARLA/Carla_0.9.11/PythonAPI/examples/...</code>, then run [data_collection_CARLA.py](data_collection/data_collection_CARLA.py) to collect data from a default starting point in a town map, e.g. 
+To try data collection, note that data collection script must be placed under path <code><path_to_Carla_folder>/CARLA/Carla_0.9.11/PythonAPI/examples/...</code>, then run [data_collection_CARLA.py](data/data_collection/data_collection_CARLA.py) to collect data from a default starting point in a town map, e.g. 
 
 ```
 python data_collection_CARLA.py -town 4  -start_point 30
@@ -73,11 +73,11 @@ python rendering.py --rgb-path <path to RGB images> --depth-path <path to depth 
 Example augmentation dataset is provided under [rendering example](data/data_augmentation/rendering_example/), to try the example, simply run
 
 ```
-python rendering.py --rgb-path ./rendering_example/RGB --depth-path ./rendering_example/Depth --out-path ./rendering_example/Output --txt-path ./rendering_example/txt/data.txt
+python rendering.py --rgb-path ./rendering_example/RGB --depth-path ./rendering_example/Depth --out-path ./rendering_example/Output --txt-path ./rendering_example/txt/delta_data.txt
 ```
 
 ## Training
-To run the training script, run training.py [training.py](train.py). Different models can be trained by setting arguments<code>-depth, -relative_transform</code> and providing image directory and label file path of different depth map and transformation resources. Other configurations for training, such as batch size, can be changed in <code>config.json</code>.   
+To run the training script, run training.py [training.py](training.py). Different models can be trained by setting arguments<code>-depth, -relative_transform</code> and providing image directory and label file path of different depth map and transformation resources. Other configurations for training, such as batch size, can be changed in <code>config.json</code>.   
 An example of running the training script:
 ```
 python training.py -depth cdn -relative_transform rcnn -image_dir <path to augmented images> -label_file <path to label file>
@@ -129,3 +129,7 @@ python <path to the inference folder>/evaluation_cnnmlp_offline_impulses.py -cnn
 | Oracle | CNN | models/pretained_models/Stereo_depth+3D_Detector.pth |
 | Random Noise Injection | CNN | models/pretained_models/Random_Noise_Injection.pth |
 | MLP | MLP | models/pretained_models/MLP.pth |
+
+## Related Projects:
+
+In our implementation, [CDN network](https://github.com/Div99/W-Stereo-Disp) and [Semi-Global Block Matching (SGBM)method](https://elib.dlr.de/55367/1/Stereo_Processing-Hirschm%C3%BCller.pdf) are deployed as two different depth estimators. To  determine  relative  transformation  of  thetarget  vehicle  with  respect  to  the  ego-vehicle  we  use  the pre-trained model of [PointRCNN](https://github.com/sshaoshuai/PointRCNN) as our 3D object Detector.
