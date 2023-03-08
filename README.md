@@ -73,7 +73,7 @@ python rendering.py --rgb-path <path to RGB images> --depth-path <path to depth 
 Example augmentation dataset is provided under [rendering example](data/data_augmentation/rendering_example/), to try the example, simply run
 
 ```
-python rendering.py --rgb-path ./rendering_example/RGB --depth-path ./rendering_example/Depth --out-path ./rendering_example/Output --txt-path ./rendering_example/txt/data.txt
+python rendering.py --rgb-path ./rendering_example/RGB --depth-path ./rendering_example/Depth --out-path ./rendering_example/Output --txt-path ./rendering_example/txt/delta_data.txt
 ```
 
 ## Training
@@ -129,3 +129,7 @@ python <path to the inference folder>/evaluation_cnnmlp_offline_impulses.py -cnn
 | Oracle | CNN | models/pretained_models/Stereo_depth+3D_Detector.pth |
 | Random Noise Injection | CNN | models/pretained_models/Random_Noise_Injection.pth |
 | MLP | MLP | models/pretained_models/MLP.pth |
+
+## Related Projects:
+
+In our implementation, [CDN network](https://github.com/Div99/W-Stereo-Disp) and [Semi-Global Block Matching (SGBM)method](https://elib.dlr.de/55367/1/Stereo_Processing-Hirschm%C3%BCller.pdf) are deployed as two different depth estimators. To  determine  relative  transformation  of  thetarget  vehicle  with  respect  to  the  ego-vehicle  we  use  the pre-trained model of [PointRCNN](https://github.com/sshaoshuai/PointRCNN) as our 3D object Detector.
