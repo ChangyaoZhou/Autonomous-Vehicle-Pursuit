@@ -77,7 +77,7 @@ python rendering.py --rgb-path ./rendering_example/RGB --depth-path ./rendering_
 ```
 
 ## Training
-To run the training script, run training.py [training.py](train.py). The resource of depth map and relative transformation can be switched by setting arugments<code>-depth, -relative_transform</code>. Other configurations for training, such as batch size, can be changed in corresponding .json config files.  
+To run the training script, run training.py [training.py](train.py). Different models can be trained by setting arguments<code>-depth, -relative_transform</code> and providing image directory and label file path of different depth map and transformation resources. Other configurations for training, such as batch size, can be changed in <code>config.json</code>.   
 An example of running the training script:
 ```
 python training.py -depth cdn -relative_transform rcnn -image_dir <path to augmented images> -label_file <path to label file>

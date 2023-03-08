@@ -16,8 +16,9 @@ from prediction.models import MyModel_CNN
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 SPLIT_DIR = './train/split/'
-CONFIG_DIR = './train/config/'
 LOG_DIR = './train/training_logs/'
+CONFIG_PATH = './config.json'
+
 
 
 def shuffle_data(delta_file, split_dir):
@@ -93,8 +94,7 @@ def main():
     
     args = parser.parse_args()
 
-    argument_file = CONFIG_DIR + args.depth + args.relative_transform + '.json'
-    with open(argument_file) as f:
+    with open(CONFIG_PATH) as f:
         config = json.load(f)
         print(config)
     for k, v in config.items():
