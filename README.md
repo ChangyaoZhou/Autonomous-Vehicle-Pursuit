@@ -53,7 +53,7 @@ If CARLA server is not running in the other terminal, client script will also no
 ```
 ./CarlaUE4.sh
 ```
-To try data collection, note that data collection script must be placed under path <code><path_to_Carla_folder>/CARLA/Carla_0.9.11/PythonAPI/examples/...</code>, then run [data_collection_CARLA.py](sata/data_collection/data_collection_CARLA.py) to collect data from a default starting point in a town map, e.g. 
+To try data collection, note that data collection script must be placed under path <code><path_to_Carla_folder>/CARLA/Carla_0.9.11/PythonAPI/examples/...</code>, then run [data_collection_CARLA.py](data/data_collection/data_collection_CARLA.py) to collect data from a default starting point in a town map, e.g. 
 
 ```
 python data_collection_CARLA.py -town 4  -start_point 30
