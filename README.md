@@ -119,7 +119,7 @@ python <path to the inference folder>/evaluation_cnnmlp_offline_impulses.py -cnn
 
 | Model | CNN/MLP | Path|
 | :-----:| :----: | :----: |
-| Baseline | CNN | models/pretained_models/Baseline.pth |
+| Baseline | CNN | [prediction/models/pretained_models/Baseline.pth] |
 | Three-camera | CNN | models/pretained_models/Three-camera.pth |
 | SS depth + 3D detector (our approach) | CNN | models/pretained_models/SS_depth+3D_detector.pth |
 | Stereo depth + 3D detector (our approach) | CNN | models/pretained_models/Stereo_depth+3D_Detector.pth |
