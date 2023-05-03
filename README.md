@@ -119,16 +119,16 @@ python <path to the inference folder>/evaluation_cnnmlp_offline_impulses.py -cnn
 
 | Model | CNN/MLP | Path|
 | :-----:| :----: | :----: |
-| Baseline | CNN | [prediction/models/pretained_models/Baseline.pth] |
-| Three-camera | CNN | models/pretained_models/Three-camera.pth |
-| SS depth + 3D detector (our approach) | CNN | models/pretained_models/SS_depth+3D_detector.pth |
-| Stereo depth + 3D detector (our approach) | CNN | models/pretained_models/Stereo_depth+3D_Detector.pth |
-| ground truth depth + 3D detector | CNN | models/pretained_models/GT_depth+3D_detector.pth |
-| SS depth + ground truth transformation | CNN | models/pretained_models/SS_depth+GT_transformation.pth |
-| Stereo depth +  ground truth transformation | CNN | models/pretained_models/Oracle.pth |
-| Oracle | CNN | models/pretained_models/Stereo_depth+3D_Detector.pth |
-| Random Noise Injection | CNN | models/pretained_models/Random_Noise_Injection.pth |
-| MLP | MLP | models/pretained_models/MLP.pth |
+| Baseline | CNN | [Baseline.pth](prediction/models/pretained_models/Baseline.pth) |
+| Three-camera | CNN | [Three-camera.pth](prediction/models/pretained_models/Three-camera.pth) |
+| SS depth + 3D detector (our approach) | CNN | [SS_depth+3D_detector.pth](prediction/models/pretained_models/SS_depth+3D_detector.pth) |
+| Stereo depth + 3D detector (our approach) | CNN | [Stereo_depth+3D_Detector.pth](prediction/models/pretained_models/Stereo_depth+3D_Detector.pth) |
+| ground truth depth + 3D detector | CNN | [GT_depth+3D_detector.pth](prediction/models/pretained_models/GT_depth+3D_detector.pth) |
+| SS depth + ground truth transformation | CNN | [SS_depth+GT_transformation.pth](prediction/models/pretained_models/SS_depth+GT_transformation.pth) |
+| Stereo depth +  ground truth transformation | CNN | [Oracle.pth](prediction/models/pretained_models/Oracle.pth) |
+| Oracle | CNN | [Stereo_depth+3D_Detector.pth](prediction/models/pretained_models/Stereo_depth+3D_Detector.pth) |
+| Random Noise Injection | CNN | [Random_Noise_Injection.pth](prediction/models/pretained_models/Random_Noise_Injection.pth) |
+| MLP | MLP | [MLP.pth](prediction/models/pretained_models/MLP.pth) |
 
 ## Related Projects:
 
