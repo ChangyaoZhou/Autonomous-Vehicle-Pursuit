@@ -125,8 +125,8 @@ python <path to the inference folder>/evaluation_cnnmlp_offline_impulses.py -cnn
 | Stereo depth + 3D detector (our approach) | CNN | [Stereo_depth+3D_Detector.pth](prediction/models/pretrained_models/Stereo_depth+3D_Detector.pth) |
 | ground truth depth + 3D detector | CNN | [GT_depth+3D_detector.pth](prediction/models/pretrained_models/GT_depth+3D_detector.pth) |
 | SS depth + ground truth transformation | CNN | [SS_depth+GT_transformation.pth](prediction/models/pretrained_models/SS_depth+GT_transformation.pth) |
-| Stereo depth +  ground truth transformation | CNN | [Oracle.pth](prediction/models/pretrained_models/Oracle.pth) |
-| Oracle | CNN | [Stereo_depth+3D_Detector.pth](prediction/models/pretrained_models/Oracle.pth) |
+| Stereo depth +  ground truth transformation | CNN | [Stereo_depth+GT_transformation.pth](prediction/models/pretrained_models/Stereo_depth+GT_transformation.pth) |
+| Oracle | CNN | [Oracle.pth](prediction/models/pretrained_models/Oracle.pth) |
 | Random Noise Injection | CNN | [Random_Noise_Injection.pth](prediction/models/pretrained_models/Random_Noise_Injection.pth) |
 | MLP | MLP | [MLP.pth](prediction/models/pretrained_models/MLP.pth) |
 
