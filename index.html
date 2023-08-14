@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Robust Autonomous Vehicle Pursuit without Expert Steering Labels">
+  <meta property="og:title" content="Robust Autonomous Vehicle Pursuit without Expert Steering Labels"/>
+  <meta property="og:description" content="Robust Autonomous Vehicle Pursuit without Expert Steering Labels"/>
+  <meta property="og:url" content="https://ChangyaoZhou.github.io/Autonomous-Vehicle-Pursuit/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="images/overview.jpg" /> -->
+  <!-- <meta property="og:image:width" content="1245"/> -->
+  <!-- <meta property="og:image:height" content="562"/> -->
+
+
+  <!-- <meta name="twitter:title" content="Robust Autonomous Vehicle Pursuit without Expert Steering Labels"> -->
+  <!-- <meta name="twitter:description" content="Multi Agent Navigation using a U-Attention based Graphical Neural Network"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="images/overview.jpg"> -->
+  <!-- <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Robust Autonomous Vehicle Pursuit without Expert Steering Labels">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Robust Autonomous Vehicle Pursuit without Expert Steering Labels</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.icon">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Robust Autonomous Vehicle Pursuit without Expert Steering Labels</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/Jiaxin-Pan" target="_blank">Jiaxin Pan*<sup>1,2</sup></a>,</span>
+                <span class="author-block">
+                <a href="https://github.com/ChangyaoZhou" target="_blank">Changyao Zhou*<sup>1,2</sup></a>,</span>
+                <span class="author-block">
+                <a href="https://cvg.cit.tum.de/members/gladkova" target="_blank">Mariia Gladkova<sup>1,2</sup></a>,</span>
+                <span class="author-block">
+                <a href="https://cvg.cit.tum.de/members/khamuham" target="_blank">Qadeer Khan<sup>1,2</sup></a>,</span>
+                <span class="author-block"> 
+                <a href="https://cvg.cit.tum.de/members/cremers" target="_blank">Daniel Cremers<sup>1,2,3</sup></a></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Technical University of Munich<sup>1</sup>, Munich Center for Machine Learning<sup>2</sup>, University of Oxford<sup>3</sup> 
+                <br>IEEE Robotics and Automation Letters</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                    <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2307.16727.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Supplementary PDF link -->
+              <span class="link-block">
+                <a href="supplementary.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Supplementary</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+              </span>
+
+                <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2307.16727" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-small" id="Abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we present a learning method for both lateral and longitudinal motion control of an ego-vehicle for the task of vehicle pursuit. The car being controlled does not have a pre-defined route, rather it reactively adapts to follow a target vehicle while maintaining a safety distance. To train our model, we do not rely on steering labels recorded from an expert driver, but effectively leverage a classical controller as an offline label generation tool. In addition, we account for the errors in the predicted control values, which can lead to a loss of tracking and catastrophic crashes of the controlled vehicle. To this end, we propose an effective  data augmentation approach, which allows to train a network that is capable of handling different views of the target vehicle. During the pursuit, the target vehicle is firstly localized using a Convolutional Neural Network. The network takes a single RGB image along with cars' velocities and estimates target vehicle's pose with respect to the ego-vehicle. This information is then fed to a Multi-Layer Perceptron, which regresses the control commands for the ego-vehicle, namely throttle and steering angle. We extensively validate our approach using the CARLA simulator on a wide range of terrains. Our method demonstrates real-time performance, robustness to different scenarios including unseen trajectories and high route completion. 
+          </p>
+          <p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> 
+</section>
+<!-- End paper abstract -->
+
+<section class="hero is-small is-light" id="Results-of-our-Model">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">
+        Overview
+      </h2>
+      <div class="item">
+        <div class="columns is-four-fifths is-centered">
+          <img src="images/pipeline_new.gif" alt="MY ALT TEXT"/>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Our proposed framework consists of preparatory offline steps (left) and online pipeline (right), which is conducted respectively during training and testing of our system. 
+        </p>
+        <p>
+          <b>Left:</b> Firstly, we perform label generation using Model Predictive Controller. MPC takes location and orientation of the target with respect to the ego-vehicle estimated by a LiDAR-based 3D detector. Secondly, data augmentation is conducted by utilizing estimated dense depth maps for novel view synthesis. 
+        </p>
+        <p>
+          <b>Right:</b> Our learning method is trained to predict accurate lateral and longitudinal control values by leveraging obtained labels, augmented image dataset and velocities of both ego and target vehicles. During test time our approach requires only RGB image sequence and velocities as input to control the ego-vehicle.
+        </p>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light" id="Results-of-our-Model">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">
+        Results
+      </h2>
+      <div class="content has-text-justified">
+        <p>
+          Here we show videos to show the qualitative results of our approach in <strong>different maps</strong>, in a city (left) and in the countryside (right). To summarize, the first vehicle (red) in the video is controlled by autopilot. The ego-vehicle (black) is controlled autonomously with our method to follow the red target vehicle.
+        </p>
+      </div> 
+      <!-- <div id="results-carousel" class="carousel results-carousel" data-interval="30">  --> 
+      <div class="item">
+        <div class="columns is-four-fifths is-centered">
+          <img src="images/1ego_cat.gif" alt="MY ALT TEXT"/>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          We further tested our model with <strong>ego vehicles</strong>. As can be seen in the ego vehicle, the first vehicle (red) is controlled by autopilot, the first ego-vehicle (gray) is controlled by our model to follow the red target vehicle. And the second ego-vehicle (black) is controlled by the same model to follow the gray ego-vehicle.
+        </p>
+      </div> 
+      <div class="item"> 
+        <div class="columns is-four-fifths is-centered">
+          <img src="images/2ego_cat.gif" alt="MY ALT TEXT"/>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Though the model is trained only with samples in sunny weather, it fits <strong>different weather conditions</strong> quite well. Here we show two examples, in dark night (left) and rainy weather (right).
+        </p>
+      </div> 
+      <div class="item"> 
+        <div class="columns is-four-fifths is-centered">
+          <img src="images/weather_cat.gif" alt="MY ALT TEXT"/>
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small"  id="Attention-Mechanism-of-our-Model">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">
+          Environment
+      </h2>  
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        Clone the repo, setup CARLA 0.9.11, and build the conda environment:
+      </p>
+      <pre>
+        <code>
+          conda create -n myenv python=3.7 
+          conda activate myenv
+          conda install --file requirements.txt
+        </code>
+      </pre>
+      <p>
+        For installation of pytorch3d, you can refer to <a href="https://pytorch3d.org/tutorials/">Pytorch3d - Tutorial</a>  
+      </p>
+      <p>
+        For installation of CARLA 0.9.11, you can refer to <a href="https://github.com/carla-simulator/carla#building-carla">CARLA 0.9.11</a> 
+      </p>
+    </div>
+    <div class="container">
+      <h3 class="title is-3">
+          Lisence
+      </h3>  
+      <p>
+        CARLA specific code is distributed under MIT License. CARLA specific assets are distributed under CC-BY License.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="hero is-small is-light" id="Comparison-with-Other-Models">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">
+        Data Collection
+      </h2>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        If CARLA server is not running in the other terminal, client script will also not run. Thus, first start the CARLA server with (By default connected to port 2000)
+      </p>
+      <pre>
+        <code>
+          ./CarlaUE4.sh
+        </code>
+      </pre>
+      <p>
+        To try data collection, note that data collection script must be placed under path <i>path_to_Carla_folder/CARLA/Carla_0.9.11/PythonAPI/examples/...</i>, then run <a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/data/data_collection/data_collection_CARLA.py">data_collection_CARLA.py</a> to collect data from a default starting point in a town map, e.g.
+      </p>
+      <pre>
+        <code>
+          python data_collection_CARLA.py -town 4  -start_point 30
+        </code>
+      </pre> 
+    </div>  
+  </div>
+</section>
+
+
+<section class="hero is-small is-light" id="Comparison-with-Other-Models">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">
+        Data Augmentation
+      </h2>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        Example synthesized views with longitudinal, lateral and rotational offset 
+      </p> 
+    </div>  
+    <div class="item"> 
+      <div class="columns is-four-fifths is-centered">
+        <img src="images/rendering.gif" alt="MY ALT TEXT"/>
+      </div>
+    </div> 
+    <div class="content has-text-justified">
+      <p>
+        To try data augmentation, run <a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/data/data_augmentation/rendering.py"> rendering.py</a> 
+      </p> 
+      <pre>
+        <code>
+          python rendering.py --rgb-path path_to_RGB_images --depth-path path_to_depth_maps --out-path output_path --txt-path path_to_the_txt_file></path>
+        </code>
+      </pre>
+      <p>
+        Example augmentation dataset is provided under <a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/tree/main/data/data_augmentation/rendering_example"> rendering example</a>, to try the example, simply run
+      </p>
+      <pre>
+        <code>
+          python rendering.py --rgb-path ./rendering_example/RGB --depth-path ./rendering_example/Depth --out-path ./rendering_example/Output --txt-path ./rendering_example/txt/delta_data.txt
+        </code>
+      </pre>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light" id="Comparison-with-Other-Models">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">
+        Training
+      </h2>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        To run the training script, run <a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/training.py"> training.py</a>. Different models can be trained by setting arguments <i>-depth, -relative_transform</i> and providing image directory and label file path of different depth map and transformation resources. Other configurations for training, such as batch size, can be changed in <i>config.json</i>.
+      </p>
+      <p>
+        An example of running the training script:
+      </p>
+      <pre>
+        <code>
+          python training.py -depth cdn -relative_transform rcnn -image_dir path_to_augmented_images -label_file path_to_label_file
+        </code>
+      </pre>
+      <p>
+        To try data collection, note that data collection script must be placed under path <i>path_to_Carla_folder/CARLA/Carla_0.9.11/PythonAPI/examples/...</i>, then run <a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/data/data_collection/data_collection_CARLA.py">data_collection_CARLA.py</a> to collect data from a default starting point in a town map, e.g.
+      </p>
+      <pre>
+        <code>
+          python data_collection_CARLA.py -town 4  -start_point 30
+        </code>
+      </pre> 
+    </div>  
+  </div>
+</section>
+
+
+<section class="hero is-small is-light" id="Comparison-with-Other-Models">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">
+        Inference and Evaluation
+      </h2>
+    </div>
+    <div class="container">
+      <h3 class="title is-3">
+        Steps:
+      </h3>
+    </div>
+    <div class="content has-text-justified">
+      <ol>
+        <li>The inference needs to run with the CARLA simulator, please place <a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/tree/main/prediction/inference"> inference folder</a> under path <i>path_to_Carla_folder/CARLA/Carla_0.9.11/PythonAPI/examples/.</i></li>
+        <li>Before running the inference script, it is necessary to start the CARLA simulator.</li>
+        <li>Run the script for evaluation. 
+          <pre>
+            <code>
+              python path_to_inference_folder/evaluation_cnnmlp_offline_impulses.py -cnn_path path_to_trained_cnn_model, -mlp_path path_to_trained_mlp_model -town town_number -spawn_point spawn_point_number -impulse_level impulse_level_number 
+            </code>
+          </pre>Evaluation result will be saved to <b>evaluation.txt</b> and <b>evaluation.xls</b> under path <i>inference/output/.</i>. Both will be created automatically if not existing.</li>
+      </ol>
+    </div>
+    <div class="container">
+      <h3 class="title is-3">
+        Arguments:
+      </h3>
+    </div>
+    <div class="content has-text-justified">
+      <ol>
+        <li>Extra impulses could be added to the ego vehicle during inference, level could be specified with argument <i>-impulse_level</i> in range [0, 0.5].</li>
+        <li>The following town numbers and spawn points are picked for inference, rare overlapping with trajectories in the training dataset. Inference trajectory could be specified by arguments <i>-town</i> and <i>-spawn_point</i>. Using flag <i>--all</i> would automatically run inference for all trajectories.</li>
+      </ol>
+    </div> 
+    <table border="2">
+      <tr>
+        <td>Town Number</td>
+        <td>Spawn Point Number</td> 
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>100</td> 
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>150</td> 
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>100</td> 
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>0</td> 
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>112</td> 
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>200</td> 
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>280</td> 
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>368</td> 
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>2</td> 
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>100</td> 
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>150</td> 
+      </tr>
+    </table>
+  </div>
+</section>
+
+
+<section class="hero is-small is-light" id="Comparison-with-Other-Models">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">
+        Pretrained Models
+      </h2>
+    </div>
+    <table border="2">
+      <tr>
+        <td>Model</td>
+        <td>CNN/MLP</td>
+        <td>Path</td> 
+      </tr>
+      <tr>
+        <td>Baseline</td>
+        <td>CNN</td>
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/Baseline.pth" target="_blank">Baseline.pth</a></td> 
+      </tr>
+      <tr>
+        <td>Three-camera</td>
+        <td>CNN</td> 
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/Three-camera.pth" target="_blank">Three-camera.pth</a></td>
+      </tr>
+      <tr>
+        <td>SS depth + 3D detector (our approach)</td>
+        <td>CNN</td> 
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/SS_depth+3D_detector.pth" target="_blank"></a>SS_depth+3D_detector.pth</td>
+      </tr>
+      <tr>
+        <td>Stereo depth + 3D detector (our approach)</td>
+        <td>CNN</td>
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/Stereo_depth+3D_Detector.pth" target="_blank">Stereo_depth+3D_detector.pth</a></td> 
+      </tr>
+      <tr>
+        <td>ground truth depth + 3D detector</td>
+        <td>CNN</td> 
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/GT_depth+3D_detector.pth" target="_blank">GT_depth+3D_detector</a></td>
+      </tr>
+      <tr>
+        <td>SS depth + ground truth transformation</td>
+        <td>CNN</td> 
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/SS_depth+GT_transformation.pth" target="_blank">SS_depth+GT_transformation.pth</a></td>
+      </tr>
+      <tr>
+        <td>Stereo depth + ground truth transformation</td>
+        <td>CNN</td> 
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/Stereo_depth+GT_transformation.pth" target="_blank">Stereo_depth+GT_transformation.pth</a></td>
+      </tr>
+      <tr>
+        <td>Oracle</td>
+        <td>CNN</td> 
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/Oracle.pth" target="_blank">Oracle.pth</a></td>
+      </tr>
+      <tr>
+        <td>Random Noise Injection</td>
+        <td>CNN</td> 
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/Random_Noise_Injection.pth" target="_blank">Random_Noise_Injection.pth</a></td>
+      </tr>
+      <tr>
+        <td>Control_Value_Predictor</td>
+        <td>MLP</td> 
+        <td><a href="https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/prediction/models/pretrained_models/MLP.pth" target="_blank">MLP.pth</a></td>
+      </tr> 
+    </table>
+  </div>
+</section>
+
+<section class="hero is-small is-light" id="Comparison-with-Other-Models">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">
+        Related Projects
+      </h2>
+    </div>
+    <div class="content has-text-justified">
+      <p> 
+        In our implementation, <a href="https://github.com/Div99/W-Stereo-Disp" target="_blank">CDN network, </a> <a href="https://elib.dlr.de/55367/1/Stereo_Processing-Hirschm%C3%BCller.pdf" target="_blank">Semi-Global Block Matching (SGBM) method</a> are deployed as two different depth estimators. To determine relative transformation of thetarget vehicle with respect to the ego-vehicle we use the pre-trained model of <a href="https://github.com/sshaoshuai/PointRCNN" target="_blank">PointRCNN</a> as our 3D object Detector.
+      </p>
+      <p>
+        This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> under the license <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>. We thank the authors for the open-source code.
+      </p>
+    </div>
+  </div> 
+</section>
+
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @misc{ma2023multi,
+      title={Multi Agent Navigation in Unconstrained Environments using a Centralized Attention based Graphical Neural Network Controller}, 
+      author={Yining Ma and Qadeer Khan and Daniel Cremers},
+      year={2023},
+      eprint={2307.16727},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}}</code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> under the license <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. We thank the authors for the open-source code.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
