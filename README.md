@@ -3,7 +3,11 @@
 
  This repository contains code for the paper **Robust Autonomous Vehicle Pursuit without Supervised Steering Labels** submitted to IEEE Robotic Automation Letter. 
 
+[Paper Link](https://arxiv.org/abs/2308.08380) | [Project Page](https://changyaozhou.github.io/Autonomous-Vehicle-Pursuit/)
+
 ![image](./images/pipeline_new.png)
+
+
 
 In this work, we present a learning method for lateral and longitudinal motion control of an ego-vehicle for the task of vehicle pursuit. 
 To train our model, we do not rely on steering labels recorded from an expert driver, but effectively leverage classical controller as an offline label generation tool.
