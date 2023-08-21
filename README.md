@@ -5,7 +5,7 @@
 
 ![image](./images/pipeline_new.png)
 
-[Paper Link](https://arxiv.org/abs/2308.08380) | [Project Page](https://changyaozhou.github.io/Autonomous-Vehicle-Pursuit/) | [Video](inference video.mp4)
+[Paper Link](https://arxiv.org/abs/2308.08380) | [Project Page](https://changyaozhou.github.io/Autonomous-Vehicle-Pursuit/) 
 
 
 In this work, we present a learning method for lateral and longitudinal motion control of an ego-vehicle for the task of vehicle pursuit. 
