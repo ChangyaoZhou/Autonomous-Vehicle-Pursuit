@@ -5,6 +5,9 @@
 
 ![image](./images/pipeline_new.png)
 
+[Paper Link](https://arxiv.org/abs/2308.08380) | [Project Page](https://changyaozhou.github.io/Autonomous-Vehicle-Pursuit/) | [Video](inference video.mp4)
+
+
 In this work, we present a learning method for lateral and longitudinal motion control of an ego-vehicle for the task of vehicle pursuit. 
 To train our model, we do not rely on steering labels recorded from an expert driver, but effectively leverage classical controller as an offline label generation tool.
 In addition, we account for the errors in the predicted control values, which can lead to crashes of the controlled vehicle. 
