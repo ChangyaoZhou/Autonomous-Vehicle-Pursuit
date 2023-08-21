@@ -3,7 +3,7 @@
 
  This repository contains code for the paper **Robust Autonomous Vehicle Pursuit without Supervised Steering Labels** submitted to IEEE Robotic Automation Letter. 
 
-[Paper Link](https://arxiv.org/abs/2308.08380) | [Project Page](https://changyaozhou.github.io/Autonomous-Vehicle-Pursuit/)
+[Paper Link](https://arxiv.org/abs/2308.08380) | [Project Page](https://changyaozhou.github.io/Autonomous-Vehicle-Pursuit/) | [Video](https://github.com/ChangyaoZhou/Autonomous-Vehicle-Pursuit/blob/main/inference%20video.mp4)
 
 ![image](./images/pipeline_new.png)
 
